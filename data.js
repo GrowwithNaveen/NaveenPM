@@ -57,8 +57,7 @@ independentProjects:[
 {id:"used-books-marketplace",imageLight:"assets/used-books-marketplace-light.jpg",imageDark:"assets/used-books-marketplace-dark.jpg",i:"📚",c:"blue",title:"Used-books marketplace app",org:"Product design case study",short:"A mobile marketplace concept to make buying and selling used books easier.",tags:["Customer journey","Metrics","Prioritization","User persona","Wireframes"],story:"The brief was to design a mobile app that makes it easier for people to buy and sell used books. The case study outlines research questions, market understanding, user needs, solution prioritization, information architecture, and key app flows.",role:["Break down the problem and map the discovery work","Prioritize features using a MoSCoW approach","Define user flows and wireframes for buying and selling"],results:["A documented product structure and user flows","Wireframes for key buyer and seller screens"]}],
 shelf:{reading:[["Clear Thinking","Shane Parrish"]],fav:[]},
 audio:{
-  "intro": "Warm, musical sound and close listening—especially to the arrangements and layers in Tamil music.",
-  "philosophy": "I’m an audiophile, not a collector. Tamil music is my reference point: I listen for the intricate arrangements, soundstage layers, and acoustic detail in the work of Ilaiyaraaja, A. R. Rahman, Harris Jayaraj, Yuvan Shankar Raja, and Santhosh Narayanan.",
+  "intro": "Warm, musical sound and close listening—especially to the arrangements and layers in songs and music.",
   "sound": "I gravitate toward a warm, analog, non-fatiguing presentation: sub-bass with impact, textured mid-bass, and a rich, full midrange. Vocals should sound natural; treble should extend smoothly without becoming sharp. Mild treble sensitivity—especially with sharper planar drivers—has taught me to favor musical, relaxed tuning over analytical brightness, so I can listen for hours.",
   "artists": [
     "Ilaiyaraaja",
@@ -66,15 +65,6 @@ audio:{
     "Harris Jayaraj",
     "Yuvan Shankar Raja",
     "Santhosh Narayanan"
-  ],
-  "soundProfile": [
-    "Warm & musical",
-    "Sub-bass impact",
-    "Textured mid-bass",
-    "Rich, full mids",
-    "Natural vocals",
-    "Smooth extended treble",
-    "Long-session comfort"
   ],
   "rigs": [
     {
@@ -91,7 +81,7 @@ audio:{
         ],
         [
           "Interconnect",
-          "AGARO 3.5 mm to dual RCA analog cable"
+          "Fiio 3.5 mm to dual RCA analog cable"
         ],
         [
           "Amplifier",
@@ -198,7 +188,7 @@ audio:{
           ""
         ],
         [
-          "Wharfedale subwoofer",
+          "Wharfedale D-10 subwoofer",
           ""
         ]
       ]

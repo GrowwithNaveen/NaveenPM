@@ -338,3 +338,5 @@ html[data-theme="noir"] .theme-toggle[aria-pressed=true] .theme-glyph{color:var(
 .home-rag-banner p{margin:0;color:var(--ink);font-size:14px;line-height:1.55}
 .home-rag-banner+.hero{padding-top:34px}
 @media(max-width:760px){.home-rag-banner{align-items:flex-start;flex-direction:column;gap:5px;margin-top:17px;padding:13px 15px}.home-rag-banner p{font-size:13px}.home-rag-banner+.hero{padding-top:30px}}
+
+.audiophile-page-layout .audio-philosophy-copy{grid-template-columns:minmax(0,1fr)}
