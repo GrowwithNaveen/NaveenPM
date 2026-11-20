@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f6f2">
+  <title>Skills &amp; Tools — Story Proposal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17232d;
+      --muted: #59656d;
+      --paper: #f7f6f2;
+      --white: #fff;
+      --line: #d9ddd9;
+      --accent: #d55b45;
+      --accent-soft: #f3e2dc;
+      --blue: #e6edf0;
+      --shadow: 0 12px 35px rgba(23, 35, 45, .07);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      padding: 42px 28px 64px;
+      background: var(--paper);
+      color: var(--ink);
+      font: 400 16px/1.65 "DM Sans", system-ui, sans-serif;
+    }
+    .preview { max-width: 1190px; margin: 0 auto; }
+    .section-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 32px;
+      margin-bottom: 34px;
+    }
+    .eyebrow, .stage-index, .label {
+      color: var(--accent);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .14em;
+      line-height: 1.4;
+      text-transform: uppercase;
+    }
+    h1, h2, h3, p { margin-top: 0; }
+    h1, h2, h3 {
+      font-family: "Space Grotesk", "DM Sans", system-ui, sans-serif;
+      letter-spacing: -.045em;
+      line-height: 1.12;
+    }
+    h1 { max-width: 620px; margin-bottom: 0; font-size: clamp(2.2rem, 5.5vw, 4rem); }
+    .section-intro { max-width: 425px; margin: 0 0 4px; color: var(--muted); font-size: 17px; }
+    .journey {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      position: relative;
+    }
+    .stage {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+    }
+    .stage:nth-child(2) { background: var(--blue); }
+    .stage:nth-child(3) { background: #f2eee7; }
+    .stage-head { display: flex; align-items: center; gap: 13px; margin-bottom: 21px; }
+    .stage-index {
+      display: grid;
+      width: 38px;
+      height: 38px;
+      flex: 0 0 38px;
+      place-items: center;
+      border: 1px solid #e9b3a7;
+      border-radius: 50%;
+      background: var(--white);
+      letter-spacing: .04em;
+    }
+    .stage-name { margin: 0; font-size: 12px; font-weight: 700; letter-spacing: .13em; text-transform: uppercase; }
+    .stage h2 { margin-bottom: 10px; font-size: clamp(1.55rem, 2.6vw, 2rem); }
+    .stage-summary { min-height: 78px; margin-bottom: 18px; color: var(--muted); }
+    .stage-work { display: grid; gap: 9px; margin: 0 0 21px; padding: 0; list-style: none; }
+    .stage-work li { position: relative; padding-left: 17px; color: var(--ink); font-size: 14px; line-height: 1.5; }
+    .stage-work li::before { position: absolute; top: .55em; left: 0; width: 6px; height: 6px; border-radius: 50%; background: var(--accent); content: ""; }
+    .stage-skills { margin-top: auto; padding-top: 19px; border-top: 1px solid rgba(89, 101, 109, .2); }
+    .label { display: block; margin-bottom: 10px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255, 255, 255, .76);
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.35;
+    }
+    .tools { margin-top: 17px; }
+    .tools summary {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      color: var(--accent);
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 700;
+      list-style: none;
+    }
+    .tools summary::-webkit-details-marker { display: none; }
+    .tools summary::after { content: "+"; font-size: 16px; font-weight: 500; }
+    .tools[open] summary::after { content: "−"; }
+    .tools .chips { margin-top: 12px; }
+    .outcome {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 18px;
+      padding: 12px 13px;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .62);
+      color: var(--ink);
+      font-size: 12px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .outcome-mark { color: var(--accent); font-size: 17px; }
+    .flow-note {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 22px;
+      padding: 14px 18px;
+      border: 1px dashed #c9cec9;
+      border-radius: 13px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+    .flow-note b { color: var(--ink); }
+    .loop { color: var(--accent); font-size: 23px; line-height: 1; }
+    @media (max-width: 900px) {
+      .journey { grid-template-columns: 1fr; gap: 13px; }
+      .stage { padding: 23px; }
+      .stage-summary { min-height: 0; }
+      .stage-work { grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 20px; }
+    }
+    @media (max-width: 620px) {
+      body { padding: 28px 18px 42px; }
+      .section-top { display: block; margin-bottom: 24px; }
+      h1 { margin: 9px 0 11px; font-size: clamp(2.2rem, 11vw, 3.1rem); }
+      .section-intro { font-size: 15px; }
+      .stage { padding: 20px; border-radius: 17px; }
+      .stage-work { grid-template-columns: 1fr; }
+      .flow-note { align-items: flex-start; text-align: left; }
+    }
+    @media (prefers-reduced-motion: no-preference) {
+      .stage { transition: transform .18s ease, box-shadow .18s ease; }
+      .stage:hover { transform: translateY(-3px); box-shadow: 0 17px 40px rgba(23, 35, 45, .1); }
+    }
+  </style>
+</head>
+<body>
+  <main class="preview">
+    <section aria-labelledby="section-title">
+      <div class="section-top">
+        <div>
+          <span class="eyebrow">Skills &amp; tools · My product practice</span>
+          <h1 id="section-title">How I move products from problem to adoption</h1>
+        </div>
+        <p class="section-intro">I find the right problem, shape and validate a useful solution, then help it reach and serve the people who need it.</p>
+      </div>
+
+      <div class="journey">
+        <article class="stage" id="discover">
+          <div class="stage-head">
+            <span class="stage-index">01</span>
+            <p class="stage-name">Discover</p>
+          </div>
+          <h2>Find the right problem.</h2>
+          <p class="stage-summary">Connect business goals to real user needs, workflows, market context, and evidence.</p>
+          <ul class="stage-work">
+            <li>Understand user workflows and unmet needs</li>
+            <li>Frame the problem and test AI fit</li>
+            <li>Set a baseline and define success</li>
+          </ul>
+          <div class="stage-skills">
+            <span class="label">Skills I bring</span>
+            <div class="chips">
+              <span class="chip">Discovery &amp; problem framing</span>
+              <span class="chip">User interviews &amp; workflow research</span>
+              <span class="chip">Customer feedback loops</span>
+              <span class="chip">AI opportunity framing</span>
+              <span class="chip">Product strategy &amp; roadmaps</span>
+              <span class="chip">Prioritization &amp; tradeoffs</span>
+              <span class="chip">Web &amp; product analytics</span>
+              <span class="chip">Product analytics &amp; KPI design</span>
+            </div>
+          </div>
+          <details class="tools">
+            <summary>Tools I use at this stage</summary>
+            <div class="chips">
+              <span class="chip">Google Analytics</span><span class="chip">Google Tag Manager</span>
+              <span class="chip">Microsoft Clarity</span><span class="chip">Hotjar</span>
+              <span class="chip">Survicate</span><span class="chip">Google Forms</span>
+              <span class="chip">PostHog</span><span class="chip">Amplitude</span>
+              <span class="chip">Mixpanel</span><span class="chip">NotebookLM</span>
+              <span class="chip">ChatGPT / Codex</span><span class="chip">SQL</span>
+            </div>
+          </details>
+          <div class="outcome"><span class="outcome-mark" aria-hidden="true">↗</span><span>Advances as a validated opportunity and success measures</span></div>
+        </article>
+
+        <article class="stage" id="deliver">
+          <div class="stage-head">
+            <span class="stage-index">02</span>
+            <p class="stage-name">Deliver</p>
+          </div>
+          <h2>Build and prove the solution.</h2>
+          <p class="stage-summary">Turn the opportunity into a usable product, evaluate its quality, and bring teams together to ship it.</p>
+          <ul class="stage-work">
+            <li>Shape the roadmap, requirements, and experience</li>
+            <li>Prototype, build, and coordinate delivery</li>
+            <li>Evaluate AI quality and handle exceptions</li>
+          </ul>
+          <div class="stage-skills">
+            <span class="label">Skills I bring</span>
+            <div class="chips">
+              <span class="chip">PRDs &amp; technical requirements</span>
+              <span class="chip">Cross-functional delivery</span>
+              <span class="chip">Usability testing &amp; prototyping</span>
+              <span class="chip">Multi-agent product design</span>
+              <span class="chip">RAG product design &amp; evaluation</span>
+              <span class="chip">Structured output evaluation</span>
+              <span class="chip">Human review &amp; exception handling</span>
+              <span class="chip">Semantic search &amp; entity resolution</span>
+              <span class="chip">AI quality &amp; adoption metrics</span>
+              <span class="chip">Data pipeline architecture</span>
+              <span class="chip">API validation &amp; integration</span>
+              <span class="chip">Debugging &amp; QA triage</span>
+              <span class="chip">Technical specs &amp; developer handoff</span>
+              <span class="chip">Git operations</span>
+            </div>
+          </div>
+          <details class="tools">
+            <summary>Tools I use at this stage</summary>
+            <div class="chips">
+              <span class="chip">Figma</span><span class="chip">FigJam</span><span class="chip">Balsamiq</span>
+              <span class="chip">Notion</span><span class="chip">Jira</span><span class="chip">ClickUp</span>
+              <span class="chip">Whimsical</span><span class="chip">XMind</span>
+              <span class="chip">Microsoft PowerPoint</span><span class="chip">Lovable.dev</span><span class="chip">Replit</span>
+              <span class="chip">n8n</span><span class="chip">LM Studio</span><span class="chip">Ragas</span><span class="chip">TruLens</span>
+              <span class="chip">Gemini</span><span class="chip">Claude Code</span><span class="chip">Claude Design</span><span class="chip">DeepSeek</span>
+              <span class="chip">Python</span><span class="chip">dbt</span><span class="chip">BigQuery</span><span class="chip">Google Apps Script</span>
+              <span class="chip">Postman</span><span class="chip">Git</span><span class="chip">GitHub</span><span class="chip">Azure</span>
+              <span class="chip">Browser DevTools</span><span class="chip">Microsoft Excel</span><span class="chip">Metabase</span><span class="chip">Looker Studio</span>
+            </div>
+          </details>
+          <div class="outcome"><span class="outcome-mark" aria-hidden="true">↗</span><span>Advances as a shipped solution with quality evidence</span></div>
+        </article>
+
+        <article class="stage" id="distribution">
+          <div class="stage-head">
+            <span class="stage-index">03</span>
+            <p class="stage-name">Distribution</p>
+          </div>
+          <h2>Earn adoption and improve.</h2>
+          <p class="stage-summary">Make the value clear, support launch, and use adoption signals to decide what should improve next and scale faster.</p>
+          <ul class="stage-work">
+            <li>Clarify the value proposition and launch plan</li>
+            <li>Support onboarding, channels, and monetization</li>
+            <li>Measure adoption, experiment, and iterate</li>
+          </ul>
+          <div class="stage-skills">
+            <span class="label">Skills I bring</span>
+            <div class="chips">
+              <span class="chip">Go-to-market &amp; monetization</span>
+              <span class="chip">A/B tests &amp; experiment design</span>
+              <span class="chip">Funnel &amp; cohort analysis</span>
+              <span class="chip">Portfolio &amp; outcome metrics</span>
+              <span class="chip">Product-led growth</span>
+              <span class="chip">Customer feedback loops</span>
+              <span class="chip">Product analytics &amp; KPI design</span>
+            </div>
+          </div>
+          <details class="tools">
+            <summary>Tools I use at this stage</summary>
+            <div class="chips">
+              <span class="chip">PostHog</span><span class="chip">Mixpanel</span><span class="chip">Amplitude</span>
+              <span class="chip">Google Analytics</span><span class="chip">Google Tag Manager</span>
+              <span class="chip">VWO</span><span class="chip">Survicate</span><span class="chip">Google Forms</span>
+              <span class="chip">Microsoft Clarity</span><span class="chip">Hotjar</span>
+              <span class="chip">Looker Studio</span><span class="chip">Metabase</span><span class="chip">Microsoft Excel</span>
+            </div>
+          </details>
+          <div class="outcome"><span class="outcome-mark" aria-hidden="true">↗</span><span>Advances as adoption signals and the next product decision</span></div>
+        </article>
+      </div>
+
+      <div class="flow-note"><span class="loop" aria-hidden="true">↶</span><span><b>It’s a learning loop.</b> What distribution reveals feeds the next discovery cycle.</span></div>
+    </section>
+  </main>
+</body>
+</html>
