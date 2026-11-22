@@ -9,7 +9,7 @@ p{color:var(--muted)}
 .w{max-width:1120px;margin:0 auto;padding:0 28px}
 header{position:sticky;top:0;z-index:20;background:rgba(247,246,242,.94);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
 header .w{display:flex;align-items:center;justify-content:space-between;min-height:76px}
-.logo{display:grid;place-items:center;width:42px;height:42px;background:var(--ink);color:#fff;border-radius:50%;font:400 24px Bangers,cursive;letter-spacing:.04em;text-decoration:none;box-shadow:3px 3px 0 var(--accent)}
+.logo{display:grid;place-items:center;flex:none;width:68px;height:52px;background:transparent;color:transparent;border-radius:0;font-size:0;line-height:0;text-decoration:none;box-shadow:none}.logo img{display:block;width:100%;height:100%;object-fit:contain}
 nav{display:flex;align-items:center;gap:25px}nav a{font-size:14px;font-weight:600;text-decoration:none;color:var(--muted);transition:color .15s}nav a:hover,nav a.on{color:var(--accent)}
 nav a[href="index.html#contact"]{padding:9px 15px;border:1px solid var(--ink);border-radius:999px;color:var(--ink)}nav a[href="index.html#contact"]:hover{background:var(--ink);color:#fff}
 .theme-toggle{display:inline-flex;align-items:center;gap:8px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--ink);font:600 12px "DM Sans",sans-serif;cursor:pointer;white-space:nowrap;transition:background .15s,border-color .15s,color .15s}.theme-toggle:hover{border-color:var(--accent);color:var(--accent)}.theme-glyph{font-size:16px;line-height:1}.theme-toggle[aria-pressed=true]{background:var(--white);border-color:var(--line);color:var(--ink)}.theme-toggle[aria-pressed=true] .theme-glyph{color:var(--accent)}
@@ -67,7 +67,7 @@ footer{border-top:1px solid var(--line);margin-top:80px}footer .w{display:flex;a
 html[data-theme="noir"]{color-scheme:dark;--ink:#eee9df;--muted:#b7b4ad;--paper:#151719;--white:#202326;--line:#3a3d3e;--accent:#c35a4b;--accent-soft:#332523;--blue:#252c30;--shadow:0 14px 38px rgba(0,0,0,.24)}
 html[data-theme="noir"] body{background:var(--paper);color:var(--ink)}
 html[data-theme="noir"] header{background:rgba(21,23,25,.94)}
-html[data-theme="noir"] .logo{background:#282a2b;color:#f6efe4;box-shadow:3px 3px 0 var(--accent)}
+html[data-theme="noir"] .logo{background:transparent;color:transparent;box-shadow:none}
 html[data-theme="noir"] nav a[href="index.html#contact"]{border-color:var(--line);color:var(--ink)}
 html[data-theme="noir"] nav a[href="index.html#contact"]:hover{background:var(--accent);border-color:var(--accent);color:#fff}
 html[data-theme="noir"] .box{background:var(--white);border-color:var(--line)}
